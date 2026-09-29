@@ -1,0 +1,166 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --color-bg: #020202a8;
+  --color-surface: #000000b4;
+  --color-text: #f7f7f7;
+  --color-muted: #a11a79;
+  --color-primary: #52033a;
+  --color-primary-dark: #52033a;
+  --color-accent: #cf17a154;
+
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", Arial, sans-serif;
+
+  --radius: 8px;
+  --max-width: 1000px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Header (centered) ---------- */
+.site-header {
+  padding: 4rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+}
+
+.tagline {
+  margin: 0 0 1.75rem;
+  font-size: 1.15rem;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  background-color: #000000;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-accent);
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.section p {
+  max-width: 70ch;
+}
+
+/* ---------- Skills ---------- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 0.35rem 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* ---------- Projects grid ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.25rem;
+  border: 1px solid #d5e0db;
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  background-color: #dbe6e1;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+.project-card p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+}
+
+.project-card a {
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 1.5rem;
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
